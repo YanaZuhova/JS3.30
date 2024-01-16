@@ -1,18 +1,22 @@
-function Article(name, content) {
-  this.name = name;
-  this.content = content;
+class Article {
+  constructor(name, text) {
+   this.name = name;
+   this.text = text;
+  }
 }
 
-function User(name, articles) {
+class User {
+  constructor(name, article) {
   this.name = name;
   this.articles = articles;
 }
 
-User.prototype.logArticles = function () {
+logArticles() {
   this.articles.forEach((article, i) => {
     console.log(`Article ${i + 1} name is ${article.name}`);
   });
-};
+  }
+}
 
 let article1 = new Article("React", "React is good");
 let article2 = new Article("Angular", "React is nice");
