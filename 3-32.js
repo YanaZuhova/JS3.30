@@ -6,7 +6,7 @@ class Article {
 }
 
 class User {
-  constructor(name, article) {
+  constructor(name, articles) {
   this.name = name;
   this.articles = articles;
 }
